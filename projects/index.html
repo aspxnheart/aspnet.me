@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aspnet.me</title>
+    <title>aspnet.me - Projects</title>
     <style>
 
         body {
@@ -222,6 +222,8 @@
 
         .left-col {
             width: 220px;
+            min-width: 220px; /* Locks the width */
+            flex-shrink: 0; /* Prevents flexbox from squishing it */
             background: linear-gradient(to bottom, #e4eaf4 0%, #c3d5eb 100%);
             padding: 15px 12px;
             box-sizing: border-box;
@@ -302,20 +304,7 @@
         }
 
         .content-main {
-            flex: 2;
-        }
-
-        .content-side {
             flex: 1;
-        }
-
-        .custom-banner {
-            width: 100%;
-            box-sizing: border-box; 
-            height: auto;
-            border: 1px solid #d4d0c8;
-            margin-bottom: 25px; 
-            display: block;
         }
 
         .section-box {
@@ -337,101 +326,6 @@
             color: #0033cc;
             border-bottom: 1px solid #d4d0c8;
             text-align: left;
-        }
-
-        .experience-grid {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            background: #f9f9f9;
-        }
-
-        .exp-item {
-            width: 31%;
-            text-align: center;
-            background: #fff;
-            border: 1px solid #eaeaea;
-            padding: 10px;
-            box-sizing: border-box;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .exp-item img {
-            width: 100%;
-            height: 90px;
-            object-fit: contain;
-            margin-bottom: 8px;
-        }
-
-        .exp-item strong {
-            display: block;
-            font-size: 12px;
-            color: #000;
-        }
-
-        .exp-item span {
-            color: #666;
-            font-size: 11px;
-        }
-
-        .skills-container {
-            padding: 15px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .skills-container h4 {
-            margin: 0 0 8px 0;
-            color: #c00;
-            font-size: 12px;
-            grid-column: span 2;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .skill-item img {
-            width: 18px;
-            height: 18px;
-        }
-
-        .side-module h3 {
-            margin: 0 0 10px 0;
-            font-size: 13px;
-            color: #0033cc;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 4px;
-        }
-
-        .project-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px dotted #ccc;
-        }
-
-        .project-item img {
-            width: 36px;
-            height: 36px;
-            object-fit: contain;
-        }
-
-        .project-info a {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 3px;
-            font-size: 12px;
-        }
-
-        .project-info span {
-            color: #555;
-            line-height: 1.3;
         }
 
     </style>
@@ -471,10 +365,10 @@
         <div class="mega-nav">
             
             <div class="mega-col primary-links">
-                <a href="https://aspnet.me/">Portal</a>
+                <a href="../index.html">Portal</a>
                 <a href="#">Images</a>
-                <a href="https://aspnet.me/projects">Projects</a>
-                <a href="https://aspnet.me/more.html">More of .me</a>
+                <a href="index.html">Projects</a>
+                <a href="#">More of .me</a>
             </div>
             
             <div class="secondary-links">
@@ -489,8 +383,8 @@
                 <div class="mega-col">
                     <a href="https://x.com/helloitsaspen">Twitter</a>
                     <a href="https://steamcommunity.com/id/aspenoomfie/">Steam</a>
-                    <a href="Finding my philosophy.pdf">My Philosophy</a>
-                    <a href="resume without pii.pdf">My Resume</a>
+                    <a href="../Finding my philosophy.pdf">My Philosophy</a>
+                    <a href="../resume without pii.pdf">My Resume</a>
                 </div>
                 
                 <div class="mega-col">
@@ -540,115 +434,26 @@
             <div class="right-col">
                 
                 <div class="content-main">
-
-                    <img src="advert1.png" alt="YTM11 ad" class="custom-banner">
                     
                     <div class="section-box">
                         <div class="section-header">
-                            My work background
+                            Project Directory
                         </div>
-                        <div class="experience-grid">
-                            <div class="exp-item">
-                                <img src="https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/georgia-southern-eagles-ncaa-logo-sticker-u7992-b018-x418.png" alt="IT Tech">
-                                <strong>IT Field Technician</strong>
-                                <span>Georgia Southern</span><br>
-                                <span>Mar 26 - Current</span>
-                            </div>
-                            <div class="exp-item">
-                                <img src="https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/georgia-southern-eagles-ncaa-logo-sticker-u7992-b018-x418.png" alt="Graphic Designer">
-                                <strong>Graphic Designer</strong>
-                                <span>Georgia Southern</span><br>
-                                <span>Aug 25 - Mar 26</span>
-                            </div>
-                            <div class="exp-item">
-                                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFhflCoze6gGQ/company-logo_200_200/B4EZ2UDb74GYAI-/0/1776305422351/solartide_logo?e=1786579200&v=beta&t=XTjkoLVCW7NjMuOeWquAQ1WIYaGSAhW2eENfBy5spuQ" alt="Solar Tide">
-                                <strong>Founder & Dev</strong>
-                                <span>Solar Tide Studios</span><br>
-                                <span>May 25 - Current</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section-box">
-                        <div class="section-header blue">
-                            Technical skills that matter
-                        </div>
-                        <div class="skills-container">
+                        <div style="padding: 15px;">
+                            <p style="margin-top: 0;">Welcome to the project index. Select an active module below to view detailed design logs, documentation, and source materials.</p>
                             
-                            <div class="skill-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma">
-                                <span>UXD in Figma</span>
-                            </div>
-                            <div class="skill-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
-                                <span>HTML / CSS / JS</span>
-                            </div>
-                            <div class="skill-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#">
-                                <span>C#/XAML Development in VS</span>
-                            </div>
-                            <div class="skill-item">
-                                <img src="https://play-lh.googleusercontent.com/RSCFHtO51GSTid7HiZEo6Honavqnfvlqbkc2RM13lD3RZrRmsyNaq4um-PtSDbvH-8pjqYvulPpWUtOQgHoqDg" alt="ServiceNow">
-                                <span>ServiceNow Administration</span>
-                            </div>
-                            <div class="skill-item">
-                                <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/microsoft-intune.webp" alt="Intune">
-                                <span>Microsoft Intune</span>
-                            </div>
-                            <div class="skill-item">
-                                <img src="https://img.icons8.com/color/48/active-directory.png" alt="AD">
-                                <span>Active Directory</span>
-                            </div>
-                            <div class="skill-item">
-                                <img src="https://cdn-images.av-iq.com/products/enlarge/CRESTRON-GO.jpeg" alt="Crestron">
-                                <span>Crestron Systems</span>
-                            </div>
-                            <div class="skill-item">
-                                <img src="https://win98icons.alexmeub.com/icons/png/windows_slanted-1.png" alt="Legacy OS">
-                                <span>Legacy Operating Systems</span>
-                            </div>
-                        </div>
-                    </div>
+                            <h3 style="color: #0033cc; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 20px;">YTM11</h3>
+                            <p>Ongoing documentation and builds for YTM11, a project dedicated to restoring YouTube Music without ads or disruptive UI elements. <a href="ytm11.html">View project details &gt;&gt;</a></p>
 
-                </div>
+                            <h3 style="color: #0033cc; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 20px;">Vista Games Explorer & GFWL</h3>
+                            <p>Logs containing updates on Games for Windows Live (GFWL) decompilation efforts alongside customisation work for the Windows Vista Games Explorer (VGE). <a href="gfwl.html">View project details &gt;&gt;</a></p>
 
-                <div class="content-side">
-                    
-                    <div class="side-module">
-                        <h3>Resources from aspnet.me (soon)</h3>
-                        
-                        <div class="project-item">
-                            <img src="https://preview.redd.it/games-for-windows-live-aka-gfwl-v0-nystcz1l2h3g1.png?width=258&format=png&auto=webp&s=09d719fcb797e425397aceb0075987ca672821b2" alt="GFWL">
-                            <div class="project-info">
-                                <a href="#">Vista Games Explorer/GFWL</a>
-                                <span>For updates on GFWL decompilation and VGE customisation work.</span>
-                            </div>
-                        </div>
+                            <h3 style="color: #0033cc; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 20px;">UXD & Legacy Interface Replications</h3>
+                            <p>An archive of software UI/UX design practices utilizing frameworks like Avalonia UI, SukiUI, and WPF to faithfully replicate legacy desktop interfaces such as Windows Media Player 11 and Windows Vista. The design philosophy relies heavily on content layout utilizing uniform field widths and zero corner radii. <a href="uxd.html">View project details &gt;&gt;</a></p>
 
-                        <div class="project-item">
-                            <img src="https://www.logodesign.org/img/5bd07ad8b1d7a3ed.jpeg" alt="YouTube Music">
-                            <div class="project-info">
-                                <a href="#">YTM11</a>
-                                <span>For updates on YTM11, YouTube Music without ads or disruptive UI.</span>
-                            </div>
+                            <h3 style="color: #0033cc; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 20px;">Solar Tide Studios & Game Design</h3>
+                            <p>Development logs focused on game design and structural loop planning, including core mechanics for multi-team extraction shooters. Please note that the narrative visual novel project is a distinct classroom assignment and not an active title managed by Solar Tide Studios. <a href="solartide.html">View project details &gt;&gt;</a></p>
                         </div>
-                        
-                        <div class="project-item" style="border:none;">
-                            <img src="https://i.redd.it/k9tap0eriwz51.jpg" alt="Aero buttons">
-                            <div class="project-info">
-                                <a href="#">UXD/UXR</a>
-                                <span>Archived UXD/UXR work and documentation.</span>
-                            </div>
-                        </div>
-
-                        <div class="project-item" style="border:none;">
-                            <img src="https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/georgia-southern-eagles-ncaa-logo-sticker-u7992-b018-x418.png" alt="GSU">
-                            <div class="project-info">
-                                <a href="#">University Coursework</a>
-                                <span>Archived coursework and projects from my university studies.</span>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
@@ -700,22 +505,34 @@
         const playBtn = document.getElementById('playBtn');
         let audioAttempted = false;
 
+        if (sessionStorage.getItem('radioPlaying') === 'true') {
+            player.play().then(() => {
+                playBtn.innerText = 'Pause';
+                audioAttempted = true;
+            }).catch(e => {
+                console.log("Autoplay blocked on navigation.");
+            });
+        }
+
         function toggleAudio() {
             if (player.paused) {
                 player.play();
                 playBtn.innerText = 'Pause';
                 audioAttempted = true;
+                sessionStorage.setItem('radioPlaying', 'true');
             } else {
                 player.pause();
                 playBtn.innerText = 'Play Radio';
+                sessionStorage.setItem('radioPlaying', 'false');
             }
         }
 
         document.body.addEventListener('click', function() {
-            if (player.paused && !audioAttempted) {
+            if (player.paused && !audioAttempted && sessionStorage.getItem('radioPlaying') !== 'false') {
                 player.play().then(() => {
                     playBtn.innerText = 'Pause';
                     audioAttempted = true;
+                    sessionStorage.setItem('radioPlaying', 'true');
                 }).catch(e => {
                     console.log("Audio play blocked by browser policy.");
                 });
